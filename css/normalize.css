@@ -426,20 +426,35 @@ th {
 }
 
 .container {
- width:900px;
+/* width:900px;*/
  margin:auto auto;
  padding-top:15px;
  font-family: 'Oswald', sans-serif;
+ border-width:0px;
+border-top-width: 40px;
+
+border-color:#60d7a9;
+border-style: solid;
  }
 
+ .footer{
+
+
+position : absolute;
+    bottom : 0;
+    height : 40px;
+    margin-top : 40px;
+    width:100%;
+    background-color:#60d7a9;
+
+ }
 .Header {
 font-size: 45px;
 font-weight:300;
 font-family: 'Oswald', sans-serif;
 text-align:left;
-width:auto;
+width:75%;
 margin: 40px auto;
-padding-left:70px;
 
 }
 .Header h1{
@@ -454,14 +469,14 @@ margin:0;
 }
 .Header h2{
 font-size: 65px;
-font-weight:500;
+font-weight:800;
 margin:auto;
 width:auto;
 display: inline;
-border-width:0px;
+/*border-width:0px;
 border-left-width: 100px;
 border-color:#60d7a9;
-border-style: solid;
+border-style: solid;*/
 padding-left:20px
 
 }
@@ -516,8 +531,17 @@ width:71%;
  text-transform: uppercase;
  margin-bottom:15px;
  letter-spacing: 2px;
- 
  }
+ .right-content-HEADER-title {
+ font-weight:800;
+ font-size:25px;
+ text-align: left;
+ text-transform: uppercase;
+ margin-bottom:0px;
+  letter-spacing: 2px;
+ }
+ 
+ 
  .right-content-Header-inner {
  font-weight:800;
  font-size:25px;
@@ -557,5 +581,23 @@ width:71%;
 
 
 .body-content {
-width:100%;
+width:75%;
+margin:auto;
+}
+
+
+
+.right-content-TOP {
+    font-weight: 300;
+    font-size: 15px;
+    text-align: left;
+    font-family: 'Source Sans Pro', sans-serif;
+    width: 95%;
+    line-height: 105%;
+    margin: 15px 0px
+}
+
+
+.right-content-TOP p{
+    margin: 0px 0px
 }
