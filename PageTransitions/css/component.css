@@ -7,8 +7,6 @@ html, body { height: 100%; }
 	-webkit-perspective: 1200px;
 	-moz-perspective: 1200px;
 	perspective: 1200px;
-        transform-style: preserve-3d;
-
 }
 
 .pt-page {

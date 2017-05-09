@@ -440,13 +440,22 @@ border-style: solid;
  .footer{
 
 
-position : absolute;
-    bottom : 0;
-    height : 40px;
-    margin-top : 40px;
-    width:100%;
-    background-color:#60d7a9;
-
+    height: 40px;
+    line-height: 1;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 0 5px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    white-space: nowrap;
+    background-color: #60d7a9;
+    z-index: 10;
  }
 .Header {
 font-size: 45px;
@@ -538,7 +547,7 @@ width:71%;
  text-align: left;
  text-transform: uppercase;
  margin-bottom:0px;
-  letter-spacing: 2px;
+ letter-spacing: 2px;
  }
  
  
