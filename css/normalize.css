@@ -525,7 +525,7 @@ margin-right:25px;
  }
 
 .sidebar-right {
-
+margin-bottom: 100px;
 display:inline-block;
 float:right;
 /*background-color:#ddd;*/
@@ -607,4 +607,40 @@ margin:auto;
 
 .right-content-TOP p{
     margin: 0px 0px
+}
+
+@media screen and (max-width: 900px) { 
+.body-content{
+    float: none;
+    margin:0;
+    width: 95%;
+}
+}
+
+
+@media screen and (max-width: 675px) { 
+.body-content{
+    float: none;
+    width: 95%;
+    margin: auto;
+}
+.left-content-HEADER {
+      font-size: 20px;
+}
+.Header h2 {
+    font-size: 50px;
+padding-left:0;    
+}
+.Header{
+    text-align: center;
+    
+}
+.sidebar-right{
+    width:55%
+       
+}
+.sidebar-left{
+    width:35%
+}
+
 }
