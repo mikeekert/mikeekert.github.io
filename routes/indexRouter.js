@@ -1,0 +1,17 @@
+
+const express = require('express');
+const router = express.Router();
+const path = require('path');
+
+
+router.get('/', function(req, res) {
+  console.log('request for index');
+  res.sendFile(path.join(__dirname, '../public/views/index.html'));
+});
+
+router.get('/*', function(req, res) {
+  console.log('404 : ', req.params);
+  res.sendStatus(404);
+});
+
+module.exports = router;

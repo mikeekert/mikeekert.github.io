@@ -1,0 +1,22 @@
+{
+  "name": "mikeekert",
+  "version": "1.0.0",
+  "description": "",
+  "main": "client.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.7",
+    "angular-animate": "^1.6.7",
+    "angular-aria": "^1.6.7",
+    "angular-route": "^1.6.7",
+    "bulma": "^0.6.1",
+    "express": "^4.16.2",
+    "node": "^9.2.0",
+    "path": "^0.12.7"
+  }
+}
