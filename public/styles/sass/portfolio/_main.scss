@@ -4,6 +4,13 @@ body {
     height: 100vh;
 }
 
+@for $i from 1 through 10 {
+    .main-container .hero-left h2:nth-child(#{$i}) {
+        -webkit-animation-delay:(#{$i*1s});
+        animation-delay:(#{$i*0.5s});
+    }
+}
+
 @keyframes shift1 {
     0% {
         opacity: 0;
@@ -48,6 +55,34 @@ body {
     }
 }
 
+@keyframes fadein_link {
+    0% {
+        border-bottom: solid 0px rgb(255, 255, 255);
+    }
+    100% {
+        border-bottom: solid 3px rgb(255, 255, 255);
+    }
+}
+
+@keyframes crashfromleft {
+    0% {
+        opacity: 0;
+        transform: translate(-500px, 0px) rotate(0deg);
+    }
+    20% {
+        opacity: 1;
+        transform: translate(0px, 0px) rotate(3deg);
+    }
+    40% {
+        opacity: 1;
+        transform: translate(0px, 0px) rotate(8deg);
+    }
+    100% {
+        transform: translate(0px, 0px) rotate(0deg);
+        opacity: 1;
+    }
+}
+
 .main-container {
     padding: 0;
     margin: 0;
@@ -64,9 +99,9 @@ body {
     }
     .hero-image {
         position: absolute;
-        right: calc(50% - 62px);
+        right: calc(50% - 102px);
         background-color: black;
-        width: 119px;
+        width: 115px;
         top: 167px;
         height: 90px;
         background-image: url(../../assets/images/headshot.png);
@@ -110,6 +145,7 @@ body {
     .hero-left {
         background-color: $red;
         overflow: hidden;
+        padding-left: 100px;
         animation: dropin 1s;
         animation-delay: .5s;
         transform: translate(0px, 1000px);
@@ -117,18 +153,42 @@ body {
         span {
             opacity: 0;
             animation: fadein 1s;
-            animation-delay: 2s;
+            animation-delay: 1.5s;
             -webkit-animation-fill-mode: forwards;
-            text-shadow: -1px -1px 0px #f8ffd8, 3px 3px 0px #ff1753, 6px 6px 0px $blue
+            text-shadow: -1px -1px 0px #f8ffd8, 3px 3px 0px #303030, 6px 6px 0px #000000;
         }
         h2 {
             font-size: 2vw;
             font-weight: 800;
             color: white;
             opacity: 0;
-            animation: fadein 1s;
-            animation-delay: 2s;
+            animation: crashfromleft 1s; // animation-delay: 2s;
             -webkit-animation-fill-mode: forwards;
+        }
+        .footer,
+        .hero-left-footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: black;
+            color: white;
+            font-weight: 800;
+            nav {
+                margin-bottom: 50px;
+                a {
+                    color: white;
+                    cursor: pointer;
+                    text-decoration: none;
+                    margin: 0 35px;
+                    font-size: 2.5vw;
+                    &:hover {
+                        border-bottom: solid 2px rgb(255, 255, 255);
+                        display: inline;
+                        padding-bottom: 3px;
+                        animation: fadein_link .2s;
+                    }
+                }
+            }
         }
     }
     .hero-right {
@@ -138,7 +198,8 @@ body {
         .hero-right-title {
             width: 100%;
             margin: 0;
-            padding: 0;        }
+            padding: 0;
+        }
         .hero-right-project {
             width: 100%;
             opacity: 0;
