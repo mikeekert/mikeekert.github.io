@@ -7,61 +7,61 @@ body {
 
 /* line 8, ../sass/portfolio/_main.scss */
 .main-container .hero-left h2:nth-child(1) {
-  -webkit-animation-delay: 1s;
+  -webkit-animation-delay: 0.5s;
   animation-delay: 0.5s;
 }
 
 /* line 8, ../sass/portfolio/_main.scss */
 .main-container .hero-left h2:nth-child(2) {
-  -webkit-animation-delay: 2s;
+  -webkit-animation-delay: 1s;
   animation-delay: 1s;
 }
 
 /* line 8, ../sass/portfolio/_main.scss */
 .main-container .hero-left h2:nth-child(3) {
-  -webkit-animation-delay: 3s;
+  -webkit-animation-delay: 1.5s;
   animation-delay: 1.5s;
 }
 
 /* line 8, ../sass/portfolio/_main.scss */
 .main-container .hero-left h2:nth-child(4) {
-  -webkit-animation-delay: 4s;
+  -webkit-animation-delay: 2s;
   animation-delay: 2s;
 }
 
 /* line 8, ../sass/portfolio/_main.scss */
 .main-container .hero-left h2:nth-child(5) {
-  -webkit-animation-delay: 5s;
+  -webkit-animation-delay: 2.5s;
   animation-delay: 2.5s;
 }
 
 /* line 8, ../sass/portfolio/_main.scss */
 .main-container .hero-left h2:nth-child(6) {
-  -webkit-animation-delay: 6s;
+  -webkit-animation-delay: 3s;
   animation-delay: 3s;
 }
 
 /* line 8, ../sass/portfolio/_main.scss */
 .main-container .hero-left h2:nth-child(7) {
-  -webkit-animation-delay: 7s;
+  -webkit-animation-delay: 3.5s;
   animation-delay: 3.5s;
 }
 
 /* line 8, ../sass/portfolio/_main.scss */
 .main-container .hero-left h2:nth-child(8) {
-  -webkit-animation-delay: 8s;
+  -webkit-animation-delay: 4s;
   animation-delay: 4s;
 }
 
 /* line 8, ../sass/portfolio/_main.scss */
 .main-container .hero-left h2:nth-child(9) {
-  -webkit-animation-delay: 9s;
+  -webkit-animation-delay: 4.5s;
   animation-delay: 4.5s;
 }
 
 /* line 8, ../sass/portfolio/_main.scss */
 .main-container .hero-left h2:nth-child(10) {
-  -webkit-animation-delay: 10s;
+  -webkit-animation-delay: 5s;
   animation-delay: 5s;
 }
 
@@ -86,7 +86,7 @@ body {
     right: 100%;
     transform: translate(-50px, 150px) rotate(360deg);
     position: sticky;
-    top: 0;
+    top: 10px;
   }
 }
 @keyframes fadein {
@@ -147,7 +147,7 @@ body {
   text-align: center;
   width: 100%;
 }
-/* line 100, ../sass/portfolio/_main.scss */
+/* line 99, ../sass/portfolio/_main.scss */
 .main-container .hero-image {
   position: absolute;
   right: calc(50% - 102px);
@@ -164,7 +164,7 @@ body {
   animation-delay: 1.6s;
   -webkit-animation-fill-mode: forwards;
 }
-/* line 116, ../sass/portfolio/_main.scss */
+/* line 115, ../sass/portfolio/_main.scss */
 .main-container .cube-one,
 .main-container .cube-two {
   height: 100px;
@@ -174,14 +174,14 @@ body {
   opacity: 0;
   position: relative;
 }
-/* line 125, ../sass/portfolio/_main.scss */
+/* line 124, ../sass/portfolio/_main.scss */
 .main-container .cube-one {
   animation: shift1 1s;
   animation-delay: 1s;
   border: 5px solid #fff;
   -webkit-animation-fill-mode: forwards;
 }
-/* line 131, ../sass/portfolio/_main.scss */
+/* line 130, ../sass/portfolio/_main.scss */
 .main-container .cube-two {
   border: 5px solid black;
   animation: shift2 1s;
@@ -190,14 +190,14 @@ body {
   float: right;
   z-index: 3;
 }
-/* line 139, ../sass/portfolio/_main.scss */
+/* line 138, ../sass/portfolio/_main.scss */
 .main-container .cube-image {
   position: absolute;
   left: 50%;
   top: 20%;
   z-index: 99;
 }
-/* line 145, ../sass/portfolio/_main.scss */
+/* line 144, ../sass/portfolio/_main.scss */
 .main-container .hero-left {
   background-color: black;
   overflow: hidden;
@@ -207,7 +207,7 @@ body {
   transform: translate(0px, 1000px);
   -webkit-animation-fill-mode: forwards;
 }
-/* line 153, ../sass/portfolio/_main.scss */
+/* line 152, ../sass/portfolio/_main.scss */
 .main-container .hero-left span {
   opacity: 0;
   animation: fadein 1s;
@@ -215,7 +215,7 @@ body {
   -webkit-animation-fill-mode: forwards;
   text-shadow: -1px -1px 0px #f8ffd8, 3px 3px 0px #303030, 6px 6px 0px #000000;
 }
-/* line 160, ../sass/portfolio/_main.scss */
+/* line 159, ../sass/portfolio/_main.scss */
 .main-container .hero-left h2 {
   font-size: 2vw;
   font-weight: 800;
@@ -224,7 +224,7 @@ body {
   animation: crashfromleft 1s;
   -webkit-animation-fill-mode: forwards;
 }
-/* line 168, ../sass/portfolio/_main.scss */
+/* line 167, ../sass/portfolio/_main.scss */
 .main-container .hero-left .footer,
 .main-container .hero-left .hero-left-footer {
   position: absolute;
@@ -234,12 +234,12 @@ body {
   color: white;
   font-weight: 800;
 }
-/* line 176, ../sass/portfolio/_main.scss */
+/* line 175, ../sass/portfolio/_main.scss */
 .main-container .hero-left .footer nav,
 .main-container .hero-left .hero-left-footer nav {
   margin-bottom: 50px;
 }
-/* line 178, ../sass/portfolio/_main.scss */
+/* line 177, ../sass/portfolio/_main.scss */
 .main-container .hero-left .footer nav a,
 .main-container .hero-left .hero-left-footer nav a {
   color: white;
@@ -248,7 +248,7 @@ body {
   margin: 0 35px;
   font-size: 2.5vw;
 }
-/* line 184, ../sass/portfolio/_main.scss */
+/* line 183, ../sass/portfolio/_main.scss */
 .main-container .hero-left .footer nav a:hover,
 .main-container .hero-left .hero-left-footer nav a:hover {
   border-bottom: solid 2px white;
@@ -256,19 +256,19 @@ body {
   padding-bottom: 3px;
   animation: fadein_link .2s;
 }
-/* line 194, ../sass/portfolio/_main.scss */
+/* line 193, ../sass/portfolio/_main.scss */
 .main-container .hero-right {
   background-color: #fff;
   overflow-x: hidden;
   overflow-y: scroll;
 }
-/* line 198, ../sass/portfolio/_main.scss */
+/* line 197, ../sass/portfolio/_main.scss */
 .main-container .hero-right .hero-right-title {
   width: 100%;
   margin: 0;
   padding: 0;
 }
-/* line 203, ../sass/portfolio/_main.scss */
+/* line 202, ../sass/portfolio/_main.scss */
 .main-container .hero-right .hero-right-project {
   width: 100%;
   opacity: 0;
@@ -276,14 +276,33 @@ body {
   animation-delay: 2.5s;
   -webkit-animation-fill-mode: forwards;
 }
-/* line 210, ../sass/portfolio/_main.scss */
+/* line 209, ../sass/portfolio/_main.scss */
 .main-container .hero-right .project {
   text-align: right;
   float: right;
-  width: 60%;
+  width: 70%;
   margin: 80px 0;
 }
-/* line 216, ../sass/portfolio/_main.scss */
+/* line 214, ../sass/portfolio/_main.scss */
+.main-container .hero-right .project > div {
+  margin-bottom: 80px;
+}
+/* line 217, ../sass/portfolio/_main.scss */
+.main-container .hero-right .project .image {
+  height: 250px;
+  width: 500px;
+  display: block;
+  overflow: hidden;
+}
+/* line 222, ../sass/portfolio/_main.scss */
+.main-container .hero-right .project .image .proj-image {
+  background-position: center;
+  background-size: cover;
+  background-image: url("/assets/images/week4/image0.png");
+  height: 250px;
+  width: 500px;
+}
+/* line 231, ../sass/portfolio/_main.scss */
 .main-container .hero-right h2 {
   text-align: right;
   color: black;
@@ -291,7 +310,7 @@ body {
   width: 100%;
 }
 
-/* line 225, ../sass/portfolio/_main.scss */
+/* line 240, ../sass/portfolio/_main.scss */
 .navbar {
   background-color: #fff;
   padding: 15px;
