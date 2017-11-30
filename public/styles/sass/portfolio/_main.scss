@@ -1,0 +1,228 @@
+body {
+    font-family: 'Montserrat', cursive;
+    background-color: $paleyellow;
+    height: 100vh;
+}
+
+@for $i from 1 through 10 {
+    .main-container .hero-left h2:nth-child(#{$i}) {
+        -webkit-animation-delay:(#{$i*1s});
+        animation-delay:(#{$i*0.5s});
+    }
+}
+
+@keyframes shift1 {
+    0% {
+        opacity: 0;
+        left: 0%;
+    }
+    100% {
+        opacity: 1;
+        left: 100%;
+        transform: translate(-50px, 150px) rotate(360deg);
+    }
+}
+
+@keyframes shift2 {
+    0% {
+        opacity: 0;
+        right: 0%;
+    }
+    100% {
+        opacity: 1;
+        right: 100%;
+        transform: translate(-50px, 150px) rotate(360deg);
+        position: sticky;
+        top: 0;
+    }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes dropin {
+    0% {
+        transform: translate(0px, 1000px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes fadein_link {
+    0% {
+        border-bottom: solid 0px rgb(255, 255, 255);
+    }
+    100% {
+        border-bottom: solid 3px rgb(255, 255, 255);
+    }
+}
+
+@keyframes crashfromleft {
+    0% {
+        opacity: 0;
+        transform: translate(-500px, 0px) rotate(0deg);
+    }
+    20% {
+        opacity: 1;
+        transform: translate(0px, 0px) rotate(3deg);
+    }
+    40% {
+        opacity: 1;
+        transform: translate(0px, 0px) rotate(8deg);
+    }
+    100% {
+        transform: translate(0px, 0px) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+.main-container {
+    padding: 0;
+    margin: 0;
+    max-width: none;
+    height: 100vh;
+    span {
+        // position: absolute;
+        font-weight: 800;
+        color: white;
+        font-size: 4rem;
+        top: 35%;
+        text-align: center;
+        width: 100%;
+    }
+    .hero-image {
+        position: absolute;
+        right: calc(50% - 102px);
+        background-color: black;
+        width: 115px;
+        top: 167px;
+        height: 90px;
+        background-image: url(../../assets/images/headshot.png);
+        background-size: cover;
+        background-position: 50% 45%;
+        opacity: 0;
+        z-index: 1;
+        animation: fadein .3s;
+        animation-delay: 1.6s;
+        -webkit-animation-fill-mode: forwards;
+    }
+    .cube-one,
+    .cube-two {
+        height: 100px;
+        padding: 5px;
+        width: 100px;
+        transition: .5s ease-in;
+        opacity: 0;
+        position: relative;
+    }
+    .cube-one {
+        animation: shift1 1s;
+        animation-delay: 1s;
+        border: 5px solid $paleyellow;
+        -webkit-animation-fill-mode: forwards;
+    }
+    .cube-two {
+        border: 5px solid $red;
+        animation: shift2 1s;
+        animation-delay: 1s;
+        -webkit-animation-fill-mode: forwards;
+        float: right;
+        z-index: 3;
+    }
+    .cube-image {
+        position: absolute;
+        left: 50%;
+        top: 20%;
+        z-index: 99;
+    }
+    .hero-left {
+        background-color: $red;
+        overflow: hidden;
+        padding-left: 100px;
+        animation: dropin 1s;
+        animation-delay: .5s;
+        transform: translate(0px, 1000px);
+        -webkit-animation-fill-mode: forwards;
+        span {
+            opacity: 0;
+            animation: fadein 1s;
+            animation-delay: 1.5s;
+            -webkit-animation-fill-mode: forwards;
+            text-shadow: -1px -1px 0px #f8ffd8, 3px 3px 0px #303030, 6px 6px 0px #000000;
+        }
+        h2 {
+            font-size: 2vw;
+            font-weight: 800;
+            color: white;
+            opacity: 0;
+            animation: crashfromleft 1s; // animation-delay: 2s;
+            -webkit-animation-fill-mode: forwards;
+        }
+        .footer,
+        .hero-left-footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: black;
+            color: white;
+            font-weight: 800;
+            nav {
+                margin-bottom: 50px;
+                a {
+                    color: white;
+                    cursor: pointer;
+                    text-decoration: none;
+                    margin: 0 35px;
+                    font-size: 2.5vw;
+                    &:hover {
+                        border-bottom: solid 2px rgb(255, 255, 255);
+                        display: inline;
+                        padding-bottom: 3px;
+                        animation: fadein_link .2s;
+                    }
+                }
+            }
+        }
+    }
+    .hero-right {
+        background-color: $paleyellow;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        .hero-right-title {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .hero-right-project {
+            width: 100%;
+            opacity: 0;
+            animation: fadein 1s;
+            animation-delay: 2.5s;
+            -webkit-animation-fill-mode: forwards;
+        }
+        .project {
+            text-align: right;
+            float: right;
+            width: 60%;
+            margin: 80px 0;
+        }
+        h2 {
+            text-align: right;
+            color: $red;
+            font-size: 3vw;
+            width: 100%;
+        }
+    }
+}
+
+.navbar {
+    background-color: $paleyellow;
+    padding: 15px;
+}
