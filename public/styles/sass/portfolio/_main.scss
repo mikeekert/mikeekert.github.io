@@ -11,6 +11,19 @@ body {
     }
 }
 
+@-webkit-keyframes shift1 {
+    0% {
+        opacity: 0;
+        left: 0%;
+    }
+    100% {
+        opacity: 1;
+        left: 100%;
+        -webkit-transform: translate(-50px, 150px) rotate(360deg);
+        transform: translate(-50px, 150px) rotate(360deg);
+    }
+}
+
 @keyframes shift1 {
     0% {
         opacity: 0;
@@ -19,7 +32,26 @@ body {
     100% {
         opacity: 1;
         left: 100%;
+        -webkit-transform: translate(-50px, 150px) rotate(360deg);
         transform: translate(-50px, 150px) rotate(360deg);
+    }
+}
+
+@-webkit-keyframes shift2 {
+    0% {
+        opacity: 0;
+        right: 0%;
+    }
+    100% {
+        opacity: 1;
+        right: 100%;
+        -webkit-transform: translate(45px, 162px) rotate(360deg);
+        transform: translate(45px, 162px) rotate(360deg);
+        position: fixed;
+        top: 0;
+        z-index: 3;
+        left: 50%;
+        border-left: none;
     }
 }
 
@@ -31,12 +63,22 @@ body {
     100% {
         opacity: 1;
         right: 100%;
+        -webkit-transform: translate(45px, 162px) rotate(360deg);
         transform: translate(45px, 162px) rotate(360deg);
         position: fixed;
         top: 0;
         z-index: 3;
         left: 50%;
         border-left: none;
+    }
+}
+
+@-webkit-keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
 
@@ -49,53 +91,121 @@ body {
     }
 }
 
-@keyframes dropin {
+@-webkit-keyframes dropin {
     0% {
+        -webkit-transform: translate(0px, 1000px);
         transform: translate(0px, 1000px);
     }
     100% {
+        -webkit-transform: translate(0px, 0px);
         transform: translate(0px, 0px);
     }
 }
 
-@keyframes fadein_link {
+@keyframes dropin {
+    0% {
+        -webkit-transform: translate(0px, 1000px);
+        transform: translate(0px, 1000px);
+    }
+    100% {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+    }
+}
+
+@-webkit-keyframes fadein_link {
     0% {
         border-bottom: solid 0px rgb(255, 255, 255);
+    }
+    50% {
+        border-bottom: solid 6px rgb(255, 255, 255);
     }
     100% {
         border-bottom: solid 3px rgb(255, 255, 255);
     }
 }
 
-@keyframes crashfromleft {
+@keyframes fadein_link {
+    0% {
+        border-bottom: solid 0px rgb(255, 255, 255);
+        font-size: 2.9vw;        
+    }
+    50% {
+        border-bottom: solid 6px rgb(255, 255, 255);
+    }
+    100% {
+        border-bottom: solid 3px rgb(255, 255, 255);
+        // transform: scale(1.2);        
+    }
+}
+
+@-webkit-keyframes crashfromleft {
     0% {
         opacity: 0;
+        -webkit-transform: translate(-500px, 0px) rotate(0deg);
         transform: translate(-500px, 0px) rotate(0deg);
     }
     20% {
         opacity: 1;
+        -webkit-transform: translate(0px, 0px) rotate(3deg);
         transform: translate(0px, 0px) rotate(3deg);
     }
     40% {
         opacity: 1;
+        -webkit-transform: translate(0px, 0px) rotate(8deg);
         transform: translate(0px, 0px) rotate(8deg);
     }
     100% {
+        -webkit-transform: translate(0px, 0px) rotate(0deg);
         transform: translate(0px, 0px) rotate(0deg);
         opacity: 1;
     }
 }
 
-@keyframes zoom {
+@keyframes crashfromleft {
     0% {
+        opacity: 0;
+        -webkit-transform: translate(-500px, 0px) rotate(0deg);
+        transform: translate(-500px, 0px) rotate(0deg);
+    }
+    20% {
+        opacity: 1;
+        -webkit-transform: translate(0px, 0px) rotate(3deg);
+        transform: translate(0px, 0px) rotate(3deg);
+    }
+    40% {
+        opacity: 1;
+        -webkit-transform: translate(0px, 0px) rotate(8deg);
+        transform: translate(0px, 0px) rotate(8deg);
+    }
+    100% {
+        -webkit-transform: translate(0px, 0px) rotate(0deg);
+        transform: translate(0px, 0px) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes zoom {
+    0% {
+        -webkit-transform: scale(1);
         transform: scale(1)
     }
     100% {
+        -webkit-transform: scale(1.4);
         transform: scale(1.4);
     }
 }
 
-
+@keyframes zoom {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+    100% {
+        -webkit-transform: scale(1.4);
+        transform: scale(1.4);
+    }
+}
 
 .main-container {
     padding: 0;
@@ -122,7 +232,9 @@ body {
         background-position: 50% 45%;
         opacity: 0;
         z-index: 1;
+        -webkit-animation: fadein .3s;
         animation: fadein .3s;
+        -webkit-animation-delay: 1.6s;
         animation-delay: 1.6s;
         -webkit-animation-fill-mode: forwards;
     }
@@ -131,21 +243,29 @@ body {
         height: 100px;
         padding: 5px;
         width: 62px;
+        -webkit-transition: .5s ease-in;
+        -o-transition: .5s ease-in;
         transition: .5s ease-in;
         opacity: 0;
         position: relative;
     }
     .cube-one {
+        -webkit-animation: shift1 1s;
         animation: shift1 1s;
+        -webkit-animation-delay: 1s;
         animation-delay: 1s;
         border: 5px solid $paleyellow;
+        -webkit-transition: .5s ease-in;
+        -o-transition: .5s ease-in;
         transition: .5s ease-in;
         -webkit-animation-fill-mode: forwards;
         border-right: none;
     }
     .cube-two {
         border: 5px solid $red;
+        -webkit-animation: shift2 1s;
         animation: shift2 1s;
+        -webkit-animation-delay: 1s;
         animation-delay: 1s;
         -webkit-animation-fill-mode: forwards;
         float: right;
@@ -163,13 +283,19 @@ body {
         background-color: $red;
         overflow: hidden;
         padding-left: 100px;
+        -webkit-animation: dropin 1s;
         animation: dropin 1s;
+        -webkit-animation-delay: .5s;
         animation-delay: .5s;
+        -webkit-transform: translate(0px, 1000px);
+        -ms-transform: translate(0px, 1000px);
         transform: translate(0px, 1000px);
         -webkit-animation-fill-mode: forwards;
         span {
             opacity: 0;
+            -webkit-animation: fadein 1s;
             animation: fadein 1s;
+            -webkit-animation-delay: 1.5s;
             animation-delay: 1.5s;
             -webkit-animation-fill-mode: forwards;
             text-shadow: -1px -1px 0px #f8ffd8, 3px 3px 0px #303030, 6px 6px 0px #000000;
@@ -179,6 +305,7 @@ body {
             font-weight: 800;
             color: white;
             opacity: 0;
+            -webkit-animation: crashfromleft 1s;
             animation: crashfromleft 1s; // animation-delay: 2s;
             -webkit-animation-fill-mode: forwards;
         }
@@ -192,17 +319,22 @@ body {
             font-weight: 800;
             nav {
                 margin-bottom: 50px;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
                 a {
                     color: white;
                     cursor: pointer;
                     text-decoration: none;
                     margin: 0 35px;
-                    font-size: 2.5vw;
+                    font-size: 2.9vw;
+                    border-bottom: solid 6px rgb(0, 0, 0);
+                    transition: all .5s;
                     &:hover {
-                        border-bottom: solid 2px rgb(255, 255, 255);
                         display: inline;
-                        padding-bottom: 3px;
+                        -webkit-animation: fadein_link .2s;
                         animation: fadein_link .2s;
+                        -webkit-animation-fill-mode: forwards;
                     }
                 }
             }
@@ -216,11 +348,16 @@ body {
             width: 100%;
             margin: 0;
             padding: 0;
+            p {
+                text-align: right;
+            }
         }
         .hero-right-project {
             width: 100%;
             opacity: 0;
+            -webkit-animation: fadein 1s;
             animation: fadein 1s;
+            -webkit-animation-delay: 2.5s;
             animation-delay: 2.5s;
             -webkit-animation-fill-mode: forwards;
         }
@@ -239,14 +376,17 @@ body {
                 overflow: hidden;
                 .proj-image {
                     background-position: center;
-                    background-size: cover;
-                    // background-image: url('/assets/images/week4/image0.png');
+                    background-size: cover; // background-image: url('/assets/images/week4/image0.png');
                     height: 250px;
                     width: 500px;
                     overflow: hidden;
+                    -webkit-transition: scale 5s;
+                    -o-transition: scale 5s;
                     transition: scale 5s;
                     &:hover {
+                        -webkit-animation: zoom;
                         animation: zoom;
+                        -webkit-animation-duration: 15s;
                         animation-duration: 15s;
                         -webkit-animation-fill-mode: forwards;
                     }

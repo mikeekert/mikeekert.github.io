@@ -3,10 +3,10 @@ myApp
         console.log('UserController created');
         let vm = this;
 
-        let image_week4 = ['image0', 'image1', 'image2'];
-        let image_week5 = ['image0', 'image1'];
-        let image_week6 = ['image0', 'image1'];
-        let image_solo = [
+        vm.image_week4 = ['image0', 'image1', 'image2'];
+        vm.image_week5 = ['image0', 'image1'];
+        vm.image_week6 = ['image0', 'image1'];
+        vm.image_solo = [
             'image0',
             'image1',
             'image2',
@@ -14,4 +14,13 @@ myApp
             'image4',
             'image5'
         ];
+
+        var slide = (arr) => {
+            let slide=1;
+            setInterval(3000, change => {
+                slide+=1;
+                return current[slide];
+            });
+
+        };
     });

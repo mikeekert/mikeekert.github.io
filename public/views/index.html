@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-  <title></title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
@@ -19,6 +19,8 @@
   <script src="./client.js"></script>
   <script src="/scripts/controllers/index.controller.js"></script>
   <script src="/scripts/services/index.service.js"></script>
+  <title>Mike Ekert</title>
+
 </head>
 
 <body ng-app="myApp">
@@ -35,13 +37,13 @@
         <div class="hero-left-footer has-text-left">
           <nav>
             <a href="test">
-              <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+              <i class="fa fa-linkedin-square is-centered" aria-hidden="true"></i>
             </a>
             <a href="test">
-              <i class="fa fa-github" aria-hidden="true"></i>
+              <i class="fa fa-github is-centered" aria-hidden="true"></i>
             </a>
             <a href="test">
-              <i class="fa fa-twitter" aria-hidden="true"></i>
+              <i class="fa fa-twitter is-centered" aria-hidden="true"></i>
             </a>
           </nav>
         </div>
@@ -50,22 +52,18 @@
     <div class="hero-image"></div>
     <div class="hero-right column">
       <div class="cube-two"> </div>
-
       <div class="hero-right-project">
-
         <div class="hero-right-title">
           <h2>PROJECTS</h2>
+          <p> <small>Code samples completed while at Prime Academy</small> </p>
         </div>
-
         <div class="project">
-
           <!-- box -->
           <div>
             <article>
               <div class="left">
                 <figure class="image is-500x500">
                   <div class="proj-image" ng-style="{'background-image':'url(/assets/images/week4/image0.png)'}"></div>
-
                 </figure>
               </div>
               <div class="media-content">
@@ -74,9 +72,12 @@
                     <strong>Image Gallery</strong>
                     <small>Week 4</small>
                     <small>-
-                      <a href="https://github.com/mikeekert/Weekend4-ImageGallery">link</a>
+                      <a href="https://github.com/mikeekert/Weekend4-ImageGallery" target="_blank">link</a>
                     </small>
                     <p>Created Image Gallery of favorite moments, complete with db hosted Comments, and Likes. </p>
+                    <strong>Technology Used:</strong>
+                    <small>AngularJS, Express.js, Node.js, mongoDB</small>
+                    <small>HTML5/CSS3, Javascript.</small>
                   </p>
                 </div>
               </div>
@@ -97,9 +98,12 @@
                     <strong>Real Estate</strong>
                     <small>Week 5</small>
                     <small>-
-                      <a href="https://github.com/mikeekert/Weekend5-RealEstate">link</a>
+                      <a href="https://github.com/mikeekert/Weekend5-RealEstate" target="_blank">link</a>
                     </small>
                     <p>Sample Real Estate listing application, with ability to sort by types and add listings.</p>
+                    <strong>Technology Used:</strong>
+                    <small>AngularJS, Express.js, Node.js, mongoDB,</small>
+                    <small>HTML5/CSS3, Material Design, Javascript.</small>
                   </p>
                 </div>
               </div>
@@ -118,9 +122,12 @@
                     <strong>Sample Portfolio</strong>
                     <small>Week 6</small>
                     <small>-
-                      <a href="https://github.com/mikeekert/Weekend4-ImageGallery">link</a>
+                      <a href="https://github.com/mikeekert/Weekend6-Portfolio" target="_blank">link</a>
                     </small>
-                    <p>Initial personal portfolio page created for weekend assignment.</p>
+                    <p>Initial personal portfolio page created for weekend assignment. Utilized the GitHub API.</p>
+                    <strong>Technology Used:</strong>
+                    <small>AngularJS, Express.js, Node.js,</small>
+                    <small>HTML5/CSS3, GitHub API, Javascript.</small>
                   </p>
                 </div>
               </div>
@@ -140,10 +147,13 @@
                     <strong>QuestLog</strong>
                     <small>Solo Project</small>
                     <small>-
-                      <a href="https://github.com/mikeekert/Weekend4-ImageGallery">link</a>
+                      <a href="https://github.com/mikeekert/soloproject" target="_blank">link</a>
                     </small>
                     <p>Personal project created to track video game progress in personal collection. Full CSS3 coding done without
                       any addtional libraries. Retro style themes.</p>
+                      <strong>Technology Used:</strong>
+                      <small>AngularJS, Express.js, Node.js, postgreSQL,</small>
+                      <small>HTML5/CSS3, Javascript, 3rd Party APIs.</small>
                   </p>
                 </div>
               </div>
@@ -153,7 +163,7 @@
             <article>
               <div class="left">
                 <figure class="image is-500x500">
-                  <img src="../assets/images/week4/image0.png" alt="Image">
+                  <div class="proj-image" ng-style="{'background-image':'url(/assets/images/group/image0.png)'}"></div>
                 </figure>
               </div>
               <div class="media-content">
@@ -162,19 +172,23 @@
                     <strong>MusicNerdz</strong>
                     <small>Group Project</small>
                     <small>-
-                      <a href="https://github.com/mikeekert/Weekend4-ImageGallery">link</a>
+                      <a href="https://github.com/ericbfriday/MusicNerdz" target="_blank">link</a>
                     </small>
                     <p>Group project for Prime Academy. Completed with a team of 5 developers, the application was created to
-                      enhance History curricu</p>
-                  </p>
+                      enhance History curriculum in the classroom by fusing music and history together.
+                    </p>
+                    <p>Application allows for admin staff to create content, Teachers to assign homework, and for Students to
+                      take the lessons.</p>
+                    </p>
+                    <strong>Technology Used:</strong>
+                    <small>AngularJS, Express.js, Node.js, postgreSQL,</small>
+                    <small>HTML5/CSS3, Material Design, Javascript.</small>
+                    
                 </div>
               </div>
             </article>
           </div>
-
-
         </div>
-
       </div>
     </div>
   </section>
