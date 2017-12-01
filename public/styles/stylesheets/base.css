@@ -84,9 +84,12 @@ body {
   100% {
     opacity: 1;
     right: 100%;
-    transform: translate(-50px, 150px) rotate(360deg);
-    position: sticky;
-    top: 10px;
+    transform: translate(45px, 162px) rotate(360deg);
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    left: 50%;
+    border-left: none;
   }
 }
 @keyframes fadein {
@@ -131,14 +134,22 @@ body {
     opacity: 1;
   }
 }
-/* line 86, ../sass/portfolio/_main.scss */
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.4);
+  }
+}
+/* line 100, ../sass/portfolio/_main.scss */
 .main-container {
   padding: 0;
   margin: 0;
   max-width: none;
   height: 100vh;
 }
-/* line 91, ../sass/portfolio/_main.scss */
+/* line 105, ../sass/portfolio/_main.scss */
 .main-container span {
   font-weight: 800;
   color: white;
@@ -147,7 +158,7 @@ body {
   text-align: center;
   width: 100%;
 }
-/* line 99, ../sass/portfolio/_main.scss */
+/* line 113, ../sass/portfolio/_main.scss */
 .main-container .hero-image {
   position: absolute;
   right: calc(50% - 102px);
@@ -164,24 +175,26 @@ body {
   animation-delay: 1.6s;
   -webkit-animation-fill-mode: forwards;
 }
-/* line 115, ../sass/portfolio/_main.scss */
+/* line 129, ../sass/portfolio/_main.scss */
 .main-container .cube-one,
 .main-container .cube-two {
   height: 100px;
   padding: 5px;
-  width: 100px;
+  width: 62px;
   transition: .5s ease-in;
   opacity: 0;
   position: relative;
 }
-/* line 124, ../sass/portfolio/_main.scss */
+/* line 138, ../sass/portfolio/_main.scss */
 .main-container .cube-one {
   animation: shift1 1s;
   animation-delay: 1s;
   border: 5px solid #fff;
+  transition: .5s ease-in;
   -webkit-animation-fill-mode: forwards;
+  border-right: none;
 }
-/* line 130, ../sass/portfolio/_main.scss */
+/* line 146, ../sass/portfolio/_main.scss */
 .main-container .cube-two {
   border: 5px solid black;
   animation: shift2 1s;
@@ -189,15 +202,17 @@ body {
   -webkit-animation-fill-mode: forwards;
   float: right;
   z-index: 3;
+  position: fixed;
+  border-left: none;
 }
-/* line 138, ../sass/portfolio/_main.scss */
+/* line 156, ../sass/portfolio/_main.scss */
 .main-container .cube-image {
   position: absolute;
   left: 50%;
   top: 20%;
   z-index: 99;
 }
-/* line 144, ../sass/portfolio/_main.scss */
+/* line 162, ../sass/portfolio/_main.scss */
 .main-container .hero-left {
   background-color: black;
   overflow: hidden;
@@ -207,7 +222,7 @@ body {
   transform: translate(0px, 1000px);
   -webkit-animation-fill-mode: forwards;
 }
-/* line 152, ../sass/portfolio/_main.scss */
+/* line 170, ../sass/portfolio/_main.scss */
 .main-container .hero-left span {
   opacity: 0;
   animation: fadein 1s;
@@ -215,7 +230,7 @@ body {
   -webkit-animation-fill-mode: forwards;
   text-shadow: -1px -1px 0px #f8ffd8, 3px 3px 0px #303030, 6px 6px 0px #000000;
 }
-/* line 159, ../sass/portfolio/_main.scss */
+/* line 177, ../sass/portfolio/_main.scss */
 .main-container .hero-left h2 {
   font-size: 2vw;
   font-weight: 800;
@@ -224,7 +239,7 @@ body {
   animation: crashfromleft 1s;
   -webkit-animation-fill-mode: forwards;
 }
-/* line 167, ../sass/portfolio/_main.scss */
+/* line 185, ../sass/portfolio/_main.scss */
 .main-container .hero-left .footer,
 .main-container .hero-left .hero-left-footer {
   position: absolute;
@@ -234,12 +249,12 @@ body {
   color: white;
   font-weight: 800;
 }
-/* line 175, ../sass/portfolio/_main.scss */
+/* line 193, ../sass/portfolio/_main.scss */
 .main-container .hero-left .footer nav,
 .main-container .hero-left .hero-left-footer nav {
   margin-bottom: 50px;
 }
-/* line 177, ../sass/portfolio/_main.scss */
+/* line 195, ../sass/portfolio/_main.scss */
 .main-container .hero-left .footer nav a,
 .main-container .hero-left .hero-left-footer nav a {
   color: white;
@@ -248,7 +263,7 @@ body {
   margin: 0 35px;
   font-size: 2.5vw;
 }
-/* line 183, ../sass/portfolio/_main.scss */
+/* line 201, ../sass/portfolio/_main.scss */
 .main-container .hero-left .footer nav a:hover,
 .main-container .hero-left .hero-left-footer nav a:hover {
   border-bottom: solid 2px white;
@@ -256,19 +271,19 @@ body {
   padding-bottom: 3px;
   animation: fadein_link .2s;
 }
-/* line 193, ../sass/portfolio/_main.scss */
+/* line 211, ../sass/portfolio/_main.scss */
 .main-container .hero-right {
   background-color: #fff;
   overflow-x: hidden;
   overflow-y: scroll;
 }
-/* line 197, ../sass/portfolio/_main.scss */
+/* line 215, ../sass/portfolio/_main.scss */
 .main-container .hero-right .hero-right-title {
   width: 100%;
   margin: 0;
   padding: 0;
 }
-/* line 202, ../sass/portfolio/_main.scss */
+/* line 220, ../sass/portfolio/_main.scss */
 .main-container .hero-right .hero-right-project {
   width: 100%;
   opacity: 0;
@@ -276,33 +291,40 @@ body {
   animation-delay: 2.5s;
   -webkit-animation-fill-mode: forwards;
 }
-/* line 209, ../sass/portfolio/_main.scss */
+/* line 227, ../sass/portfolio/_main.scss */
 .main-container .hero-right .project {
   text-align: right;
   float: right;
   width: 70%;
   margin: 80px 0;
 }
-/* line 214, ../sass/portfolio/_main.scss */
+/* line 232, ../sass/portfolio/_main.scss */
 .main-container .hero-right .project > div {
   margin-bottom: 80px;
 }
-/* line 217, ../sass/portfolio/_main.scss */
+/* line 235, ../sass/portfolio/_main.scss */
 .main-container .hero-right .project .image {
   height: 250px;
   width: 500px;
   display: block;
   overflow: hidden;
 }
-/* line 222, ../sass/portfolio/_main.scss */
+/* line 240, ../sass/portfolio/_main.scss */
 .main-container .hero-right .project .image .proj-image {
   background-position: center;
   background-size: cover;
-  background-image: url("/assets/images/week4/image0.png");
   height: 250px;
   width: 500px;
+  overflow: hidden;
+  transition: scale 5s;
 }
-/* line 231, ../sass/portfolio/_main.scss */
+/* line 248, ../sass/portfolio/_main.scss */
+.main-container .hero-right .project .image .proj-image:hover {
+  animation: zoom;
+  animation-duration: 15s;
+  -webkit-animation-fill-mode: forwards;
+}
+/* line 256, ../sass/portfolio/_main.scss */
 .main-container .hero-right h2 {
   text-align: right;
   color: black;
@@ -310,7 +332,7 @@ body {
   width: 100%;
 }
 
-/* line 240, ../sass/portfolio/_main.scss */
+/* line 265, ../sass/portfolio/_main.scss */
 .navbar {
   background-color: #fff;
   padding: 15px;
