@@ -128,14 +128,13 @@ body {
 @keyframes fadein_link {
     0% {
         border-bottom: solid 0px rgb(255, 255, 255);
-        font-size: 2.9vw;        
+        font-size: 2.9vw;
     }
     50% {
         border-bottom: solid 6px rgb(255, 255, 255);
     }
     100% {
-        border-bottom: solid 3px rgb(255, 255, 255);
-        // transform: scale(1.2);        
+        border-bottom: solid 3px rgb(255, 255, 255); // transform: scale(1.2);        
     }
 }
 
@@ -322,6 +321,20 @@ body {
                 display: -webkit-box;
                 display: -ms-flexbox;
                 display: flex;
+                .linkedin {
+                    transition: all .5s;
+                    &:hover {
+                        transition: all .5s;
+                        color: #0075B5
+                    }
+                }
+                .twitter {
+                    transition: all .5s;
+                    &:hover {
+                        transition: all .5s;
+                        color: #1ea1f2;
+                    }
+                }
                 a {
                     color: white;
                     cursor: pointer;
@@ -331,11 +344,13 @@ body {
                     border-bottom: solid 6px rgb(0, 0, 0);
                     transition: all .5s;
                     &:hover {
+                        transition: all .5s;
                         display: inline;
                         -webkit-animation: fadein_link .2s;
                         animation: fadein_link .2s;
                         -webkit-animation-fill-mode: forwards;
                     }
+
                 }
             }
         }
@@ -348,6 +363,9 @@ body {
             width: 100%;
             margin: 0;
             padding: 0;
+            >h2 {
+                text-shadow: 3px 3px 4px #c6c6c6;
+            }
             p {
                 text-align: right;
             }
