@@ -11,6 +11,10 @@ body {
     }
 }
 
+@keyframes delayedHelp {
+    0% {}
+}
+
 @-webkit-keyframes shift1 {
     0% {
         opacity: 0;
@@ -134,7 +138,7 @@ body {
         border-bottom: solid 6px rgb(255, 255, 255);
     }
     100% {
-        border-bottom: solid 3px rgb(255, 255, 255); // transform: scale(1.2);        
+        border-bottom: solid 3px rgb(255, 255, 255);
     }
 }
 
@@ -321,18 +325,88 @@ body {
                 display: -webkit-box;
                 display: -ms-flexbox;
                 display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
                 .linkedin {
+                    border-bottom: solid 6px rgb(0, 0, 0);
+                    -webkit-transition: all .5s;
+                    -o-transition: all .5s;
                     transition: all .5s;
                     &:hover {
+                        -webkit-animation: fadein_link .2s;
+                        animation: fadein_link .2s;
+                        -webkit-animation-fill-mode: forwards;
+                        -webkit-transition: all .5s;
+                        -o-transition: all .5s;
                         transition: all .5s;
                         color: #0075B5
                     }
                 }
                 .twitter {
+                    border-bottom: solid 6px rgb(0, 0, 0);
+                    -webkit-transition: all .5s;
+                    -o-transition: all .5s;
                     transition: all .5s;
                     &:hover {
+                        -webkit-animation: fadein_link .2s;
+                        animation: fadein_link .2s;
+                        -webkit-animation-fill-mode: forwards;
+                        -webkit-transition: all .5s;
+                        -o-transition: all .5s;
                         transition: all .5s;
                         color: #1ea1f2;
+                    }
+                }
+                .github {
+                    border-bottom: solid 6px rgb(0, 0, 0);
+                    -webkit-transition: all .5s;
+                    -o-transition: all .5s;
+                    transition: all .5s;
+                    &:hover {
+                        -webkit-animation: fadein_link .2s;
+                        animation: fadein_link .2s;
+                        -webkit-animation-fill-mode: forwards;
+                        -webkit-transition: all .5s;
+                        -o-transition: all .5s;
+                        transition: all .5s;
+                    }
+                }
+                .wordpress {
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    -webkit-animation: none;
+                    animation: none;
+                    width: 48px;
+                    height: 46px;
+                    border-radius: 50px;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    .reveal {
+                        font-size: .7rem;
+                        color: orange;
+                        display: none;
+                        margin: 0 auto;
+                        opacity: 0;
+                    }
+                    &:hover {
+                        width: 255px;
+                        background-color: #d54e21;
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        white-space: nowrap;
+                        .reveal {
+                            -webkit-transition-delay: .5s;
+                            -o-transition-delay: .5s;
+                            transition-delay: .5s;
+                            color: white;
+                            display: inline;
+                            margin: 0 auto;
+                            opacity: 1;
+                        }
                     }
                 }
                 a {
@@ -341,16 +415,15 @@ body {
                     text-decoration: none;
                     margin: 0 35px;
                     font-size: 2.9vw;
-                    border-bottom: solid 6px rgb(0, 0, 0);
+                    -webkit-transition: all .5s;
+                    -o-transition: all .5s;
                     transition: all .5s;
                     &:hover {
+                        -webkit-transition: all .5s;
+                        -o-transition: all .5s;
                         transition: all .5s;
                         display: inline;
-                        -webkit-animation: fadein_link .2s;
-                        animation: fadein_link .2s;
-                        -webkit-animation-fill-mode: forwards;
                     }
-
                 }
                 .email {
                     font-size: 1vw;
@@ -367,8 +440,7 @@ body {
             position: fixed;
             bottom: 0;
             right: 40%;
-            //  test
-            }
+        }
         .hero-right-title {
             width: 100%;
             margin: 0;
@@ -381,7 +453,7 @@ body {
             }
         }
         .hero-right-project {
-            padding-right:25px;
+            padding-right: 25px;
             width: 100%;
             opacity: 0;
             -webkit-animation: fadein 1s;
