@@ -11,10 +11,6 @@ body {
     }
 }
 
-@keyframes delayedHelp {
-    0% {}
-}
-
 @-webkit-keyframes shift1 {
     0% {
         opacity: 0;
@@ -373,21 +369,85 @@ body {
                     }
                 }
                 .wordpress {
+                    animation: delayedHelp 7s ease-in-out;
+                    animation-delay: 5s;
+                    @keyframes delayedHelp {
+                        0% {
+                            width: 48px;
+                            height: 46px;
+                            border-radius: 50px;
+                            display: -webkit-box;
+                            display: -ms-flexbox;
+                            display: flex;
+                        }
+                        10% {
+                            width: 255px;
+                            background-color: #d54e21;
+                            display: -webkit-box;
+                            display: -ms-flexbox;
+                            display: flex;
+                            white-space: nowrap;
+                        }
+                        90% {
+                            width: 255px;
+                            background-color: #d54e21;
+                            display: -webkit-box;
+                            display: -ms-flexbox;
+                            display: flex;
+                            white-space: nowrap;
+                        }
+                        100% {
+                            width: 48px;
+                            height: 46px;
+                            border-radius: 50px;
+                            display: -webkit-box;
+                            display: -ms-flexbox;
+                            display: flex;
+                        }
+                    }
                     -webkit-box-align: center;
                     -ms-flex-align: center;
                     align-items: center;
-                    -webkit-animation: none;
-                    animation: none;
                     width: 48px;
-                    height: 46px;
                     border-radius: 50px;
                     display: -webkit-box;
                     display: -ms-flexbox;
                     display: flex;
+                    overflow: hidden;
+                    height: 51px;
+                    padding: 1px;
                     .reveal {
+                        animation: delayedText 7s ease-in-out;
+                        animation-delay: 5s;
+                        @keyframes delayedText {
+                            0% {
+                                transform: translateX(-500px);
+                                opacity: 0;
+                                white-space: nowrap;
+                            }
+                            15% {
+                                color: white;
+                                display: block;
+                                margin: 0 auto;
+                                opacity: 1;
+                                white-space: nowrap;
+                                transform: translateX(0px);
+                            }
+                            85% {
+                                color: white;
+                                display: block;
+                                margin: 0 auto;
+                                opacity: 1;
+                                white-space: nowrap;
+                                transform: translateX(0px);
+                            }
+                            100% {
+                                transform: translateX(-500px);
+                                opacity: 0;
+                            }
+                        }
                         font-size: .7rem;
-                        color: orange;
-                        display: none;
+                        color: #d54e21; // display: none;
                         margin: 0 auto;
                         opacity: 0;
                     }
@@ -399,9 +459,9 @@ body {
                         display: flex;
                         white-space: nowrap;
                         .reveal {
-                            -webkit-transition-delay: .5s;
-                            -o-transition-delay: .5s;
-                            transition-delay: .5s;
+                            -webkit-transition-delay: .4s;
+                            -o-transition-delay: .4s;
+                            transition-delay: .4s;
                             color: white;
                             display: inline;
                             margin: 0 auto;
