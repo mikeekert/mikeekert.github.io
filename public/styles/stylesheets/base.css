@@ -438,21 +438,21 @@ body {
   bottom: 0;
   right: 40%;
 }
-/* line 371, ../sass/portfolio/_main.scss */
+/* line 372, ../sass/portfolio/_main.scss */
 .main-container .hero-right .hero-right-title {
   width: 100%;
   margin: 0;
   padding: 0;
 }
-/* line 375, ../sass/portfolio/_main.scss */
+/* line 376, ../sass/portfolio/_main.scss */
 .main-container .hero-right .hero-right-title > h2 {
   text-shadow: 3px 3px 4px #c6c6c6;
 }
-/* line 378, ../sass/portfolio/_main.scss */
+/* line 379, ../sass/portfolio/_main.scss */
 .main-container .hero-right .hero-right-title p {
   text-align: right;
 }
-/* line 382, ../sass/portfolio/_main.scss */
+/* line 383, ../sass/portfolio/_main.scss */
 .main-container .hero-right .hero-right-project {
   padding-right: 25px;
   width: 100%;
@@ -463,24 +463,24 @@ body {
   animation-delay: 2.5s;
   -webkit-animation-fill-mode: forwards;
 }
-/* line 392, ../sass/portfolio/_main.scss */
+/* line 393, ../sass/portfolio/_main.scss */
 .main-container .hero-right .project {
   text-align: right;
   float: right;
   width: 70%;
   margin: 80px 0;
 }
-/* line 397, ../sass/portfolio/_main.scss */
+/* line 398, ../sass/portfolio/_main.scss */
 .main-container .hero-right .project > div {
   margin-bottom: 80px;
 }
-/* line 400, ../sass/portfolio/_main.scss */
+/* line 401, ../sass/portfolio/_main.scss */
 .main-container .hero-right .project .image {
   height: 250px;
   display: block;
   overflow: hidden;
 }
-/* line 404, ../sass/portfolio/_main.scss */
+/* line 405, ../sass/portfolio/_main.scss */
 .main-container .hero-right .project .image .proj-image {
   background-position: center;
   background-size: cover;
@@ -490,7 +490,7 @@ body {
   -o-transition: scale 5s;
   transition: scale 5s;
 }
-/* line 412, ../sass/portfolio/_main.scss */
+/* line 413, ../sass/portfolio/_main.scss */
 .main-container .hero-right .project .image .proj-image:hover {
   -webkit-animation: zoom;
   animation: zoom;
@@ -498,7 +498,7 @@ body {
   animation-duration: 15s;
   -webkit-animation-fill-mode: forwards;
 }
-/* line 422, ../sass/portfolio/_main.scss */
+/* line 423, ../sass/portfolio/_main.scss */
 .main-container .hero-right h2 {
   text-align: right;
   color: black;
@@ -506,7 +506,7 @@ body {
   width: 100%;
 }
 
-/* line 431, ../sass/portfolio/_main.scss */
+/* line 432, ../sass/portfolio/_main.scss */
 .navbar {
   background-color: #fff;
   padding: 15px;
