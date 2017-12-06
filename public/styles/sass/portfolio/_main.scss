@@ -352,6 +352,9 @@ body {
                     }
 
                 }
+                .email {
+                    font-size: 1vw;
+                }
             }
         }
     }
@@ -359,6 +362,12 @@ body {
         background-color: $paleyellow;
         overflow-x: hidden;
         overflow-y: scroll;
+        .fa-angle-down {
+            font-size: 3rem;
+            position: fixed;
+            bottom: 0;
+            right: 40%;
+            }
         .hero-right-title {
             width: 100%;
             margin: 0;
@@ -371,6 +380,7 @@ body {
             }
         }
         .hero-right-project {
+            padding-right:25px;
             width: 100%;
             opacity: 0;
             -webkit-animation: fadein 1s;
@@ -389,14 +399,12 @@ body {
             }
             .image {
                 height: 250px;
-                width: 500px;
                 display: block;
                 overflow: hidden;
                 .proj-image {
                     background-position: center;
-                    background-size: cover; // background-image: url('/assets/images/week4/image0.png');
+                    background-size: cover;
                     height: 250px;
-                    width: 500px;
                     overflow: hidden;
                     -webkit-transition: scale 5s;
                     -o-transition: scale 5s;

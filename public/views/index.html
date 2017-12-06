@@ -24,7 +24,7 @@
 </head>
 
 <body ng-app="myApp">
-  <section class="columns main-container">
+  <section class="columns main-container" ng-controller="UserController as uc">
     <div class="hero-left column">
       <div class="cube-one"> </div>
       <p>
@@ -53,6 +53,8 @@
     <div class="hero-right column">
       <div class="cube-two"> </div>
       <div class="hero-right-project">
+    <i class="fa fa-angle-down" aria-hidden="true">{{scroll}}    
+      </i>
         <div class="hero-right-title">
           <h2>PROJECTS</h2>
           <p> <small>Code samples completed while at Prime Academy</small> </p>
@@ -147,7 +149,9 @@
                     <strong>QuestLog</strong>
                     <small>Solo Project</small>
                     <small>-
-                      <a href="https://github.com/mikeekert/soloproject" target="_blank">link</a>
+                      <a href="https://github.com/mikeekert/soloproject" target="_blank">link</a>                    <small>-
+                        <a href="http://questlog.mikeekert.com/" target="_blank">demo</a>
+                      </small>
                     </small>
                     <p>Personal project created to track video game progress in personal collection. Full CSS3 coding done without
                       any addtional libraries. Retro style themes.</p>
@@ -191,6 +195,7 @@
         </div>
       </div>
     </div>
+    
   </section>
 </body>
 
