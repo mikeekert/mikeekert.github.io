@@ -6,8 +6,8 @@ body {
 
 @for $i from 1 through 10 {
     .main-container .hero-left h2:nth-child(#{$i}) {
-        -webkit-animation-delay:(#{$i*0.5s});
-        animation-delay:(#{$i*0.5s});
+        -webkit-animation-delay:(#{$i*0.5s+1.5});
+        animation-delay:(#{$i*0.5s+1.5});
     }
 }
 
@@ -128,7 +128,6 @@ body {
 @keyframes fadein_link {
     0% {
         border-bottom: solid 0px rgb(255, 255, 255);
-        font-size: 2.9vw;
     }
     50% {
         border-bottom: solid 6px rgb(255, 255, 255);
@@ -279,6 +278,7 @@ body {
         z-index: 99;
     }
     .hero-left {
+        white-space: nowrap;
         background-color: $red;
         overflow: hidden;
         padding-left: 100px;
@@ -290,6 +290,7 @@ body {
         -ms-transform: translate(0px, 1000px);
         transform: translate(0px, 1000px);
         -webkit-animation-fill-mode: forwards;
+        transition: all .3s;
         span {
             opacity: 0;
             -webkit-animation: fadein 1s;
@@ -474,7 +475,7 @@ body {
                     cursor: pointer;
                     text-decoration: none;
                     margin: 0 35px;
-                    font-size: 2.9vw;
+                    font-size: 2.9rem;
                     -webkit-transition: all .5s;
                     -o-transition: all .5s;
                     transition: all .5s;
@@ -495,6 +496,7 @@ body {
         background-color: $paleyellow;
         overflow-x: hidden;
         overflow-y: scroll;
+        padding:0;
         .fa-angle-down {
             font-size: 3rem;
             position: fixed;
@@ -504,7 +506,7 @@ body {
         .hero-right-title {
             width: 100%;
             margin: 0;
-            padding: 0;
+            padding: 0 25px;
             >h2 {
                 text-shadow: 3px 3px 4px #c6c6c6;
             }
@@ -513,7 +515,6 @@ body {
             }
         }
         .hero-right-project {
-            padding-right: 25px;
             width: 100%;
             opacity: 0;
             -webkit-animation: fadein 1s;
@@ -525,30 +526,62 @@ body {
         .project {
             text-align: right;
             float: right;
-            width: 70%;
+            width: 100%;
             margin: 80px 0;
+            transition: all .5s;            
             &>div {
-                margin-bottom: 80px;
+                .left {
+                    transition: all .5s;                    
+                }
+                .close {
+                    cursor: pointer;
+                    position: absolute;
+                    top: 10%;
+                    right: 5%;
+                    font-size: 3rem;
+                    padding: 5px;
+                    color: #f3f3f3;
+                    transition: all .3s;                    
+                    &:hover {
+                        transform: scale(1.3);
+                        transition: all .3s;
+                    }
+                }
+                margin-bottom: 5px;
+                position: relative;
+                transition: all .5s;
+                .media-content {
+                    cursor: pointer;
+                    justify-content: center;
+                    opacity: 0;
+                    box-shadow: 2px 2px 5px black;
+                    background: white;
+                    padding: 0 15px;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 50%;
+                    height: 50px;
+                    width: 50px;
+                    margin: -25px auto;
+                    transition: all .5s;                    
+                }
+                .fade-content {
+                    transition: all .5s;
+                    opacity: 1;
+
+                }
             }
             .image {
-                height: 250px;
+                height: auto;
                 display: block;
                 overflow: hidden;
                 .proj-image {
                     background-position: center;
                     background-size: cover;
-                    height: 250px;
+                    height: auto;
                     overflow: hidden;
-                    -webkit-transition: scale 5s;
-                    -o-transition: scale 5s;
-                    transition: scale 5s;
-                    &:hover {
-                        -webkit-animation: zoom;
-                        animation: zoom;
-                        -webkit-animation-duration: 15s;
-                        animation-duration: 15s;
-                        -webkit-animation-fill-mode: forwards;
-                    }
+
                 }
             }
         }
@@ -559,9 +592,24 @@ body {
             width: 100%;
         }
     }
+    .fade-div {
+        transition: all .5s;
+        filter: brightness(.4);
+    }
+    .move-div {
+        flex-grow: 0;
+        transition: all .5s;
+    }
 }
+
 
 .navbar {
     background-color: $paleyellow;
     padding: 15px;
+}
+
+.slide-left {
+    width: 10%;
+    flex: 0;
+    transition: all 2s;
 }

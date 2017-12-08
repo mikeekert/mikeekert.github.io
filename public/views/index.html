@@ -11,7 +11,8 @@
   <link rel="manifest" href="/manifest.json">
 
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://use.fontawesome.com/releases/v5.0.0/css/all.css" rel="stylesheet">
+
   <link rel="stylesheet" href="./styles/stylesheets/bulma.css">
   <link href="../styles/stylesheets/base.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
@@ -23,10 +24,10 @@
 
 </head>
 
-<body ng-app="myApp">
-  <section class="columns main-container" ng-controller="UserController as uc">
-    <div class="hero-left column">
-      <div class="cube-one"> </div>
+<body ng-app="myApp" ng-controller="UserController as uc">
+  <section class="columns main-container">
+    <div class="hero-left column" ng-class="{'move-div': uc.move}">
+      <!-- <div class="cube-one"> </div> -->
       <p>
         <span>Michael Ekert</span>
       </p>
@@ -37,16 +38,16 @@
         <div class="hero-left-footer has-text-left">
           <nav>
             <a href="https://www.linkedin.com/in/michaelekert/" target="_blank" class="linkedin">
-              <i class="fa fa-linkedin-square is-centered" aria-hidden="true"></i>
+              <i class="fab fa-linkedin is-centered" aria-hidden="true"></i>
             </a>
             <a href="https://github.com/mikeekert" target="_blank" class="github">
-              <i class="fa fa-github is-centered" aria-hidden="true"></i>
+              <i class="fab fa-github is-centered" aria-hidden="true"></i>
             </a>
             <a href="https://twitter.com/parkkway" target="_blank" class="twitter">
-              <i class="fa fa-twitter is-centered" aria-hidden="true"></i>
+              <i class="fab fa-twitter is-centered" aria-hidden="true"></i>
             </a>
             <a href="http://blog.mikeekert.com" target="_blank" class="wordpress">
-              <i class="fa fa-wordpress is-centered" aria-hidden="true"></i>
+              <i class="fab fa-wordpress-simple is-centered" aria-hidden="true"></i>
               <div class="reveal">Find out what I'm learning!
               </div>
             </a>
@@ -54,12 +55,8 @@
         </div>
       </footer>
     </div>
-    <div class="hero-image"></div>
     <div class="hero-right column">
-      <div class="cube-two"> </div>
       <div class="hero-right-project">
-        <i class="fa fa-angle-down" aria-hidden="true">
-        </i>
         <div class="hero-right-title">
           <h2>PROJECTS</h2>
           <p>
@@ -67,139 +64,50 @@
           </p>
         </div>
         <div class="project">
-          <!-- box -->
-          <div>
-            <article>
-              <div class="left">
-                <figure class="image is-500x500">
-                  <div class="proj-image" ng-style="{'background-image':'url(/assets/images/week4/image0.png)'}"></div>
-                </figure>
-              </div>
-              <div class="media-content">
-                <div class="content">
-                  <p>
-                    <strong>Image Gallery</strong>
-                    <small>Week 4</small>
-                    <small>-
-                      <a href="https://github.com/mikeekert/Weekend4-ImageGallery" target="_blank">link</a>
-                    </small>
-                    <p>Created Image Gallery of favorite moments, complete with db hosted Comments, and Likes. </p>
-                    <strong>Technology Used:</strong>
-                    <small>AngularJS, Express.js, Node.js, mongoDB</small>
-                    <small>HTML5/CSS3, Javascript.</small>
-                  </p>
-                </div>
-              </div>
-            </article>
-          </div>
-          <!-- end box -->
-          <div>
-            <article>
-              <div class="left">
-                <figure class="image is-500x500">
-                  <!-- <img src="../assets/images/week4/image0.png" alt="Image"> -->
-                  <div class="proj-image" ng-style="{'background-image':'url(/assets/images/week5/image0.png)'}"></div>
-                </figure>
-              </div>
-              <div class="media-content">
-                <div class="content">
-                  <p>
-                    <strong>Real Estate</strong>
-                    <small>Week 5</small>
-                    <small>-
-                      <a href="https://github.com/mikeekert/Weekend5-RealEstate" target="_blank">link</a>
-                    </small>
-                    <p>Sample Real Estate listing application, with ability to sort by types and add listings.</p>
-                    <strong>Technology Used:</strong>
-                    <small>AngularJS, Express.js, Node.js, mongoDB,</small>
-                    <small>HTML5/CSS3, Material Design, Javascript.</small>
-                  </p>
-                </div>
-              </div>
-            </article>
-          </div>
-          <div>
-            <article>
-              <div class="left">
-                <figure class="image is-500x500">
-                  <div class="proj-image" ng-style="{'background-image':'url(/assets/images/week6/image0.png)'}"></div>
-                </figure>
-              </div>
-              <div class="media-content">
-                <div class="content">
-                  <p>
-                    <strong>Sample Portfolio</strong>
-                    <small>Week 6</small>
-                    <small>-
-                      <a href="https://github.com/mikeekert/Weekend6-Portfolio" target="_blank">link</a>
-                    </small>
-                    <p>Initial personal portfolio page created for weekend assignment. Utilized the GitHub API.</p>
-                    <strong>Technology Used:</strong>
-                    <small>AngularJS, Express.js, Node.js,</small>
-                    <small>HTML5/CSS3, GitHub API, Javascript.</small>
-                  </p>
-                </div>
-              </div>
-            </article>
-          </div>
-          <div>
-            <article>
-              <div class="left">
-                <figure class="image is-500x500">
-                  <div class="proj-image" ng-style="{'background-image':'url(/assets/images/solo/image0.png)'}"></div>
-                </figure>
-                </figure>
-              </div>
-              <div class="media-content">
-                <div class="content">
-                  <p>
-                    <strong>QuestLog</strong>
-                    <small>Solo Project</small>
-                    <small>-
-                      <a href="https://github.com/mikeekert/soloproject" target="_blank">link</a>
-                      <small>-
-                        <a href="http://questlog.mikeekert.com/" target="_blank">demo</a>
-                      </small>
-                    </small>
-                    <p>Personal project created to track video game progress in personal collection. Full CSS3 coding done without
-                      any addtional libraries. Retro style themes.</p>
-                    <strong>Technology Used:</strong>
-                    <small>AngularJS, Express.js, Node.js, postgreSQL,</small>
-                    <small>HTML5/CSS3, Javascript, 3rd Party APIs.</small>
-                  </p>
-                </div>
-              </div>
-            </article>
-          </div>
-          <div>
-            <article>
-              <div class="left">
-                <figure class="image is-500x500">
-                  <div class="proj-image" ng-style="{'background-image':'url(/assets/images/group/image0.png)'}"></div>
-                </figure>
-              </div>
-              <div class="media-content">
-                <div class="content">
-                  <p>
-                    <strong>MusicNerdz</strong>
-                    <small>Group Project</small>
-                    <small>-
-                      <a href="https://github.com/ericbfriday/MusicNerdz" target="_blank">link</a>
-                    </small>
-                    <p>Group project for Prime Academy. Completed with a team of 5 developers, the application was created to
-                      enhance History curriculum in the classroom by fusing music and history together.
-                    </p>
-                    <p>Application allows for admin staff to create content, Teachers to assign homework, and for Students to
-                      take the lessons.</p>
-                  </p>
-                  <strong>Technology Used:</strong>
-                  <small>AngularJS, Express.js, Node.js, postgreSQL,</small>
-                  <small>HTML5/CSS3, Material Design, Javascript.</small>
 
+          <div ng-repeat="i in uc.articleArrays | filter: {featured: 'true'}">
+              <article>
+                  <div class="left" ng-class="{'fade-div': i.appClass && uc.move==false}">
+                    <figure class="image is-500x500">
+                      <div class="proj-image">
+                        <img ng-src="{{i.image}}">
+                      </div>
+                    </figure>
+                  </div>
+                  <div class="close level" ng-show="uc.move" ng-click="uc.closeDiv(i)">
+                    <i class="far fa-window-close"></i>
+                  </div>
+                  <div class="media-content level" ng-class="{'fade-content': i.appClass}" ng-click="uc.moveDiv(i)" ng-show="!uc.move">
+                    <div class="content level">
+                      <strong>More</strong>
+                    </div>
+                  </div>
+                </article>
+          </div>
+
+          <!-- box -->
+          <div ng-mouseover="uc.fadeIn(i)" ng-mouseleave="uc.fadeOut(i)" ng-repeat="i in uc.articleArrays track by $index" ng-hide="uc.showAll===false">
+            <article>
+              <div class="left" ng-class="{'fade-div': i.appClass && uc.move==false}">
+                <figure class="image is-500x500">
+                  <div class="proj-image">
+                    <img ng-src="{{i.image}}">
+                  </div>
+                </figure>
+              </div>
+              <div class="close level" ng-show="uc.move" ng-click="uc.closeDiv(i)">
+                <i class="far fa-window-close"></i>
+              </div>
+              <div class="media-content level" ng-class="{'fade-content': i.appClass}" ng-click="uc.moveDiv(i)" ng-show="!uc.move">
+                <div class="content level">
+                  <strong>More</strong>
                 </div>
               </div>
             </article>
           </div>
+          <!-- box -->
+
+
         </div>
       </div>
     </div>
