@@ -528,20 +528,50 @@ body {
             float: right;
             width: 100%;
             margin: 80px 0;
-            transition: all .5s;            
+            transition: all .5s; 
+            .featured-content {
+                float: right;
+                padding: 15px;
+            }
+            >div {
+                >article {
+                    .close {
+                        small {
+                            font-family: Montserrat;
+                            display: block;
+                            font-size: 1rem;
+                            text-shadow: 1px 1px black;
+                            text-align: center;
+                        }
+                    }
+                }
+            }        
             &>div {
                 .left {
                     transition: all .5s;                    
                 }
                 .close {
+                    background-color: #fff;
                     cursor: pointer;
                     position: absolute;
                     top: 10%;
                     right: 5%;
-                    font-size: 3rem;
+                    font-size: 2rem;
                     padding: 5px;
                     color: #f3f3f3;
-                    transition: all .3s;                    
+                    transition: all .3s; 
+                    border: 1px solid black;
+                    outline: 1px solid white;  
+                    .fa-window-close {
+                        -webkit-text-stroke: 1px black;
+                        text-align: center;
+                        small {
+                            font-size: 1rem;
+                            text-shadow: 1px 1px 3px grey;
+                            text-align: center;
+                            -webkit-text-stroke: 1px black;
+                        }
+                    }                 
                     &:hover {
                         transform: scale(1.3);
                         transition: all .3s;

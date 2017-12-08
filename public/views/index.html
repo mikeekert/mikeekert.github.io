@@ -57,7 +57,7 @@
     </div>
     <div class="hero-right column">
       <div class="hero-right-project">
-        <div class="hero-right-title">
+        <div class="hero-right-title" ng-hide="uc.showAll===false">
           <h2>PROJECTS</h2>
           <p>
             <small>Code samples completed while at Prime Academy</small>
@@ -66,23 +66,35 @@
         <div class="project">
 
           <div ng-repeat="i in uc.articleArrays | filter: {featured: 'true'}">
-              <article>
-                  <div class="left" ng-class="{'fade-div': i.appClass && uc.move==false}">
-                    <figure class="image is-500x500">
-                      <div class="proj-image">
-                        <img ng-src="{{i.image}}">
-                      </div>
-                    </figure>
+            <article>
+              <div class="left" ng-class="{'fade-div': i.appClass && uc.move==false}">
+                <figure class="image is-500x500">
+                  <div class="proj-image">
+                    <img ng-src="{{i.image}}">
                   </div>
-                  <div class="close level" ng-show="uc.move" ng-click="uc.closeDiv(i)">
-                    <i class="far fa-window-close"></i>
+                </figure>
+              </div>
+              <div class="close level" ng-show="uc.move" ng-click="uc.closeDiv(i)">
+                  <i class="far fa-window-close"><small>Close</small></i>
+                </div>
+              <div class="media-content level" ng-class="{'fade-content': i.appClass}" ng-click="uc.moveDiv(i)" ng-show="!uc.move">
+              </div>
+              <div class="featured-content">
+                  <div class="content">
+                    <p>
+                      <strong>Real Estate</strong>
+                      <small>Week 5</small>
+                      <small>-
+                        <a href="https://github.com/mikeekert/Weekend5-RealEstate" target="_blank">link</a>
+                      </small>
+                      <p>Sample Real Estate listing application, with ability to sort by types and add listings.</p>
+                      <strong>Technology Used:</strong>
+                      <small>AngularJS, Express.js, Node.js, mongoDB,</small>
+                      <small>HTML5/CSS3, Material Design, Javascript.</small>
+                    </p>
                   </div>
-                  <div class="media-content level" ng-class="{'fade-content': i.appClass}" ng-click="uc.moveDiv(i)" ng-show="!uc.move">
-                    <div class="content level">
-                      <strong>More</strong>
-                    </div>
-                  </div>
-                </article>
+                </div>
+            </article>
           </div>
 
           <!-- box -->
@@ -95,9 +107,7 @@
                   </div>
                 </figure>
               </div>
-              <div class="close level" ng-show="uc.move" ng-click="uc.closeDiv(i)">
-                <i class="far fa-window-close"></i>
-              </div>
+
               <div class="media-content level" ng-class="{'fade-content': i.appClass}" ng-click="uc.moveDiv(i)" ng-show="!uc.move">
                 <div class="content level">
                   <strong>More</strong>
