@@ -496,7 +496,7 @@ body {
         background-color: $paleyellow;
         overflow-x: hidden;
         overflow-y: scroll;
-        padding:0;
+        padding: 0;
         .fa-angle-down {
             font-size: 3rem;
             position: fixed;
@@ -523,16 +523,19 @@ body {
             animation-delay: 2.5s;
             -webkit-animation-fill-mode: forwards;
         }
+
         .project {
             text-align: right;
             float: right;
             width: 100%;
+            max-width: 1200px;
             margin: 80px 0;
-            transition: all .5s; 
+            transition: all .5s;
             .featured-content {
                 float: right;
                 padding: 15px;
             }
+
             >div {
                 >article {
                     .close {
@@ -545,10 +548,10 @@ body {
                         }
                     }
                 }
-            }        
+            }
             &>div {
                 .left {
-                    transition: all .5s;                    
+                    transition: all .5s;
                 }
                 .close {
                     background-color: #fff;
@@ -559,9 +562,9 @@ body {
                     font-size: 2rem;
                     padding: 5px;
                     color: #f3f3f3;
-                    transition: all .3s; 
+                    transition: all .3s;
                     border: 1px solid black;
-                    outline: 1px solid white;  
+                    outline: 1px solid white;
                     .fa-window-close {
                         -webkit-text-stroke: 1px black;
                         text-align: center;
@@ -571,7 +574,7 @@ body {
                             text-align: center;
                             -webkit-text-stroke: 1px black;
                         }
-                    }                 
+                    }
                     &:hover {
                         transform: scale(1.3);
                         transition: all .3s;
@@ -594,12 +597,15 @@ body {
                     height: 50px;
                     width: 50px;
                     margin: -25px auto;
-                    transition: all .5s;                    
+                    transition: all .5s;
+                    &:hover {
+                        border-radius: 25px;
+                        transition: all .3s;
+                    }
                 }
                 .fade-content {
                     transition: all .5s;
                     opacity: 1;
-
                 }
             }
             .image {
@@ -611,7 +617,6 @@ body {
                     background-size: cover;
                     height: auto;
                     overflow: hidden;
-
                 }
             }
         }
@@ -631,7 +636,6 @@ body {
         transition: all .5s;
     }
 }
-
 
 .navbar {
     background-color: $paleyellow;

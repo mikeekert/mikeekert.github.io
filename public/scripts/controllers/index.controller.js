@@ -30,7 +30,8 @@ myApp
                 'image': '/assets/images/week4/image0.png',
                 'desc': 'Created Image Gallery of favorite moments, complete with db hosted Comments, and' +
                         ' Likes.',
-                'featured': null
+                'featured': null,
+                'tech': 'AngularJS, Express.js, Node.js, postgreSQL, HTML5/CSS3, Javascript.'
             }, {
                 'name': 'Real Estate',
                 'week': '5',
@@ -38,7 +39,8 @@ myApp
                 'image': '/assets/images/week5/image0.png',
                 'desc': 'Sample Real Estate listing application, with ability to sort by types and add li' +
                         'stings.',
-                'featured': null
+                'featured': null,
+                'tech': 'AngularJS, Express.js, Node.js, mongoDB, HTML5/CSS3, Material Design, Javascript.'
             }, {
                 'name': 'Sample Portfolio',
                 'week': '6',
@@ -46,7 +48,8 @@ myApp
                 'image': '/assets/images/week6/image0.png',
                 'desc': 'Initial personal portfolio page created for weekend assignment. Utilized the Git' +
                         'Hub API.',
-                'featured': null
+                'featured': null,
+                'tech': 'AngularJS, Express.js, Node.js, HTML5/CSS3, Javascript, GitHub API.'
             }, {
                 'name': 'QuestLog',
                 'week': 'Solo Project',
@@ -55,7 +58,8 @@ myApp
                 'image': '/assets/images/solo/image0.png',
                 'desc': 'Personal project created to track video game progress in personal collection. Fu' +
                         'll CSS3 coding done without any addtional libraries.Retro style themes.',
-                'featured': null
+                'featured': null,
+                'tech': 'AngularJS, Express.js, Node.js, postgreSQL, HTML5/CSS3, Javascript.'
 
             }, {
                 'name': 'MusicNerdz',
@@ -66,8 +70,8 @@ myApp
                         'ication was created to enhance History curriculum in the classroom by fusing mus' +
                         'ic and history together. Application allows for admin staff to create content,Te' +
                         'achers to assign homework, and for Students to take the lessons.',
-                'featured': null
-
+                'featured': null,
+                'tech': 'AngularJS, Express.js, Node.js, postgreSQL, HTML5/CSS3, Material Design, Javascript.'
             }
         ];
     });

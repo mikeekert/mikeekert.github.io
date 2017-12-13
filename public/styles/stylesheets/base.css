@@ -610,20 +610,21 @@ body {
   animation-delay: 2.5s;
   -webkit-animation-fill-mode: forwards;
 }
-/* line 526, ../sass/portfolio/_main.scss */
+/* line 527, ../sass/portfolio/_main.scss */
 .main-container .hero-right .project {
   text-align: right;
   float: right;
   width: 100%;
+  max-width: 1200px;
   margin: 80px 0;
   transition: all .5s;
 }
-/* line 532, ../sass/portfolio/_main.scss */
+/* line 534, ../sass/portfolio/_main.scss */
 .main-container .hero-right .project .featured-content {
   float: right;
   padding: 15px;
 }
-/* line 539, ../sass/portfolio/_main.scss */
+/* line 542, ../sass/portfolio/_main.scss */
 .main-container .hero-right .project > div > article .close small {
   font-family: Montserrat;
   display: block;
@@ -631,17 +632,17 @@ body {
   text-shadow: 1px 1px black;
   text-align: center;
 }
-/* line 549, ../sass/portfolio/_main.scss */
+/* line 552, ../sass/portfolio/_main.scss */
 .main-container .hero-right .project > div {
   margin-bottom: 5px;
   position: relative;
   transition: all .5s;
 }
-/* line 550, ../sass/portfolio/_main.scss */
+/* line 553, ../sass/portfolio/_main.scss */
 .main-container .hero-right .project > div .left {
   transition: all .5s;
 }
-/* line 553, ../sass/portfolio/_main.scss */
+/* line 556, ../sass/portfolio/_main.scss */
 .main-container .hero-right .project > div .close {
   background-color: #fff;
   cursor: pointer;
@@ -655,24 +656,24 @@ body {
   border: 1px solid black;
   outline: 1px solid white;
 }
-/* line 565, ../sass/portfolio/_main.scss */
+/* line 568, ../sass/portfolio/_main.scss */
 .main-container .hero-right .project > div .close .fa-window-close {
   -webkit-text-stroke: 1px black;
   text-align: center;
 }
-/* line 568, ../sass/portfolio/_main.scss */
+/* line 571, ../sass/portfolio/_main.scss */
 .main-container .hero-right .project > div .close .fa-window-close small {
-  font-size: 1.3rem;
+  font-size: 1rem;
   text-shadow: 1px 1px 3px grey;
   text-align: center;
   -webkit-text-stroke: 1px black;
 }
-/* line 575, ../sass/portfolio/_main.scss */
+/* line 578, ../sass/portfolio/_main.scss */
 .main-container .hero-right .project > div .close:hover {
   transform: scale(1.3);
   transition: all .3s;
 }
-/* line 583, ../sass/portfolio/_main.scss */
+/* line 586, ../sass/portfolio/_main.scss */
 .main-container .hero-right .project > div .media-content {
   cursor: pointer;
   justify-content: center;
@@ -689,49 +690,54 @@ body {
   margin: -25px auto;
   transition: all .5s;
 }
-/* line 599, ../sass/portfolio/_main.scss */
+/* line 601, ../sass/portfolio/_main.scss */
+.main-container .hero-right .project > div .media-content:hover {
+  border-radius: 25px;
+  transition: all .3s;
+}
+/* line 606, ../sass/portfolio/_main.scss */
 .main-container .hero-right .project > div .fade-content {
   transition: all .5s;
   opacity: 1;
 }
-/* line 605, ../sass/portfolio/_main.scss */
+/* line 611, ../sass/portfolio/_main.scss */
 .main-container .hero-right .project .image {
   height: auto;
   display: block;
   overflow: hidden;
 }
-/* line 609, ../sass/portfolio/_main.scss */
+/* line 615, ../sass/portfolio/_main.scss */
 .main-container .hero-right .project .image .proj-image {
   background-position: center;
   background-size: cover;
   height: auto;
   overflow: hidden;
 }
-/* line 618, ../sass/portfolio/_main.scss */
+/* line 623, ../sass/portfolio/_main.scss */
 .main-container .hero-right h2 {
   text-align: right;
   color: black;
   font-size: 3vw;
   width: 100%;
 }
-/* line 625, ../sass/portfolio/_main.scss */
+/* line 630, ../sass/portfolio/_main.scss */
 .main-container .fade-div {
   transition: all .5s;
   filter: brightness(0.4);
 }
-/* line 629, ../sass/portfolio/_main.scss */
+/* line 634, ../sass/portfolio/_main.scss */
 .main-container .move-div {
   flex-grow: 0;
   transition: all .5s;
 }
 
-/* line 636, ../sass/portfolio/_main.scss */
+/* line 640, ../sass/portfolio/_main.scss */
 .navbar {
   background-color: #fff;
   padding: 15px;
 }
 
-/* line 641, ../sass/portfolio/_main.scss */
+/* line 645, ../sass/portfolio/_main.scss */
 .slide-left {
   width: 10%;
   flex: 0;
