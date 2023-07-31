@@ -1,0 +1,4 @@
+<div class="center" [@openClose]="open ? 'open' : 'closed'" (@openClose.done)="go($event)">
+  <img ngSrc="/assets/main.jpg" alt="" (click)="toggle()" priority="true" [height]="2048" [width]="2048">
+</div>
+
