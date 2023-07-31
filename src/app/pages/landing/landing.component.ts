@@ -29,9 +29,10 @@ import {animate, AnimationEvent, state, style, transition, trigger} from "@angul
   ],
 })
 export class LandingComponent {
+  open = true;
+
   constructor(private router: Router) {
   }
-  open = true;
 
   toggle() {
     this.open = !this.open;

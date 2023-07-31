@@ -1,6 +1,6 @@
-<div class="greet_main" [@openClose]="closed ? 'closed' : 'open'">
+<div [@openClose]="closed ? 'closed' : 'open'" class="greet_main">
   <div class="title">
-    <video src="./assets/banner.mp4" muted autoplay loop #banner></video>
+    <video #banner autoplay loop muted src="https://bd-angular.us-ord-1.linodeobjects.com/banner.mp4"></video>
     <span>Happy Birthday</span>
   </div>
   <div class="content">
@@ -20,13 +20,12 @@
       <mat-icon *ngIf="!bgm_music.paused" color="primary">paused_arrow</mat-icon>
     </div>
 
-    <mat-slider  min="0" max="1" step="0.1" color="primary">
-      <input matSliderThumb [value]=".5" (valueChange)="updateVol($event)">
+    <mat-slider color="primary" max="1" min="0" step="0.1">
+      <input (valueChange)="updateVol($event)" [value]=".5" matSliderThumb>
     </mat-slider>
-    <button mat-icon-button aria-label="Mute button" color="primary" (click)="toggleMute()">
+    <button (click)="toggleMute()" aria-label="Mute button" color="primary" mat-icon-button>
       <mat-icon *ngIf="!bgm_music.muted" color="primary">volume_up</mat-icon>
       <mat-icon *ngIf="bgm_music.muted" color="primary">volume_off</mat-icon>
     </button>
   </div>
-
 </div>

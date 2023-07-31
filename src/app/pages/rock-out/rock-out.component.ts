@@ -1,5 +1,5 @@
 import {AfterViewInit, Component, ElementRef, ViewChild} from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {CommonModule} from '@angular/common';
 import {throwError} from "rxjs";
 import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";

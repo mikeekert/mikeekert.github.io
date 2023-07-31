@@ -1,10 +1,10 @@
-<div class="back" [routerLink]="['/greeting']">
+<div [routerLink]="['/greeting']" class="back">
   <mat-icon color="primary">arrow_left</mat-icon>
   <span>Go Back</span>
 </div>
-<div class="ctn" (click)="toggle()">
-  <video muted #myVideo [volume]=".5">
-    <source src="./assets/rock_out.mp4" type="video/mp4" />
+<div (click)="toggle()" class="ctn">
+  <video #myVideo [volume]=".5" muted>
+    <source src="https://bd-angular.us-ord-1.linodeobjects.com/rock_out.mp4" type="video/mp4"/>
     Browser not supported
   </video>
   <div class="video__controls">

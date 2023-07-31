@@ -1,5 +1,5 @@
 import {Component, ElementRef, OnDestroy, OnInit, ViewChild} from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {CommonModule} from '@angular/common';
 import {animate, state, style, transition, trigger} from "@angular/animations";
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
@@ -34,21 +34,24 @@ import {Router, RouterLink} from "@angular/router";
 export class GreetingComponent implements OnInit, OnDestroy {
   @ViewChild('banner') banner: ElementRef<HTMLVideoElement> = {} as ElementRef<HTMLVideoElement>;
   bgm_music: HTMLAudioElement = {} as HTMLAudioElement;
-  constructor(private router: Router) {}
-
   closed = true;
 
+  constructor(private router: Router) {
+  }
+
   ngOnInit() {
-    this.bgm_music = new Audio('assets/bgm.mp3')
+    this.bgm_music = new Audio('https://bd-angular.us-ord-1.linodeobjects.com/bgm.mp3')
     this.bgm_music.volume = 0;
     this.bgm_music.currentTime = 20.1;
 
     // wait for song to be ready
     this.bgm_music.addEventListener('canplaythrough', () => {
-      this.bgm_music.removeEventListener('canplaythrough', () => {});
-      this.bgm_music.play().then( () => {
+      this.bgm_music.removeEventListener('canplaythrough', () => {
+      });
+      this.bgm_music.play().then(() => {
         this.fadeIn();
-      }).catch(() => {});
+      }).catch(() => {
+      });
     });
 
     setTimeout(() => {
@@ -73,6 +76,13 @@ export class GreetingComponent implements OnInit, OnDestroy {
     this.fadeOut('/rock');
   }
 
+  togglePlay() {
+    this.banner.nativeElement.play().then(() => {
+      return;
+    });
+    this.bgm_music.paused ? this.bgm_music.play() : this.bgm_music.pause();
+  }
+
   private fadeIn() {
     const interval = setInterval(() => {
       if (this.bgm_music.volume >= .5) {
@@ -83,6 +93,7 @@ export class GreetingComponent implements OnInit, OnDestroy {
       this.bgm_music.volume += .1;
     }, 200);
   }
+
   private fadeOut(path: string) {
     const interval = setInterval(() => {
       if (this.bgm_music.volume <= 0) {
@@ -94,12 +105,5 @@ export class GreetingComponent implements OnInit, OnDestroy {
       this.bgm_music.volume = Math.round(this.bgm_music.volume * 10) / 10;
       this.bgm_music.volume -= .1;
     }, 100);
-  }
-
-  togglePlay() {
-    this.banner.nativeElement.play().then(() => {
-      return;
-    });
-    this.bgm_music.paused ? this.bgm_music.play() : this.bgm_music.pause();
   }
 }

@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { RockOutComponent } from './rock-out.component';
+import {RockOutComponent} from './rock-out.component';
 
 describe('RockOutComponent', () => {
   let component: RockOutComponent;
