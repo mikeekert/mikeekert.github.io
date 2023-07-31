@@ -1,0 +1,16 @@
+<div class="back" [routerLink]="['/greeting']">
+  <mat-icon color="primary">arrow_left</mat-icon>
+  <span>Go Back</span>
+</div>
+<div class="ctn" (click)="toggle()">
+  <video muted #myVideo [volume]=".5">
+    <source src="./assets/rock_out.mp4" type="video/mp4" />
+    Browser not supported
+  </video>
+  <div class="video__controls">
+    <mat-icon *ngIf="!playing" color="primary">play_arrow</mat-icon>
+  </div>
+</div>
+<div class="footer">
+  <span>Sb</span>
+</div>
